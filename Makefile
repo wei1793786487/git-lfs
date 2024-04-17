@@ -7,11 +7,13 @@ GIT_LFS_SHA ?= $(shell env -u GIT_TRACE git rev-parse --short HEAD)
 # should be identical.
 VERSION ?= $(shell env -u GIT_TRACE git describe HEAD)
 
+
+
 # PREFIX is VERSION without the leading v, for use in archive prefixes.
 PREFIX ?= $(patsubst v%,git-lfs-%,$(VERSION))
 
 # GO is the name of the 'go' binary used to compile Git LFS.
-GO ?= go
+GO ?= /home/sun/sdk/go1.19.10/bin/go
 
 # GOTOOLCHAIN is an environment variable which, when set to 'local',
 # prevents Go from downloading and running non-local versions of itself.
