@@ -13,7 +13,7 @@ var (
 )
 
 const (
-	Version = "3.5.0"
+	Version = "1.0.0"
 )
 
 func init() {
@@ -22,9 +22,9 @@ func init() {
 		gitCommit = "; git " + GitCommit
 	}
 	if len(Vendor) == 0 {
-		Vendor = "GitHub"
+		Vendor = "Gomall"
 	}
-	VersionDesc = fmt.Sprintf("git-lfs/%s (%s; %s %s; go %s%s)",
+	VersionDesc = fmt.Sprintf("gomall git-lfs/%s (%s; %s %s; go %s%s)",
 		Version,
 		Vendor,
 		runtime.GOOS,
